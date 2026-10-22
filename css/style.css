@@ -1,0 +1,997 @@
+
+/* Estilos generales de Maison Nails */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    background: 
+    radial-gradient(
+        ellipse at 10% 15%,
+        rgba(218, 180, 171, 0.20),
+        transparent 40%
+    ),
+    radial-gradient(
+        ellipse at 90% 55%,
+        rgba(203, 174, 153, 0.18),
+        transparent 38%
+    ),
+    #F9F3EE;
+
+    color: #292525;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: radial-gradient(
+    rgba(114, 47, 55, 0.035) 0.5px,
+    transparent 0.5px
+);
+
+background-size: 7px 7px;  
+} 
+
+/* Encabezado */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 8%;
+    background-color: #F9F6F1; 
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: padding 0.3s ease, box-shadow 0.3s ease; 
+}
+.header-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D8C8BF;
+    transition: padding 0.3s ease;
+}
+
+.logo {
+    color: #722F37;
+    text-decoration: none;
+    font-size: 38px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    transition: font-size 0.3s ease;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: #292525;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #722F37;
+} 
+
+/* Portada principal */
+
+.hero {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 35px 20px 30px;
+}
+/* Subtítulo editorial del Hero */
+
+.subtitulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #722F37;
+}
+
+.subtitulo::before,
+.subtitulo::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 1px;
+    background-color: #722F37;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.15;
+    max-width: 800px;
+    margin-bottom: 25px;
+}
+
+.descripcion {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 550px;
+    margin-bottom: 35px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #722F37;
+    color: #FFFFFF;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #512129;
+}
+
+/* Sección de servicios */
+
+.servicios {
+    padding: 50px 8% 25px;
+    text-align: center;
+}
+
+.servicios h2,
+.galeria h2,
+.contacto h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 35px;
+} 
+
+.servicios-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.servicio {
+    flex: 1;
+    padding: 40px 25px;
+    border: 1px solid #E4D8D0;
+    background-color: #FFFFFF;
+    transition: transform 0.3s;
+}
+
+.servicio h3 {
+    color: #722F37;
+    font-size: 21px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.servicio p {
+    color: #625B58;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+}
+
+/* Galería de trabajos */
+
+.galeria {
+    padding: 25px 8% 70px;
+    text-align: center;
+}
+ 
+.galeria-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 1050px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.foto-card {
+    width: 100%;
+    max-width: none;
+} 
+
+.galeria-container img {
+    width: 100%;
+    max-width: 280px;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(41, 37, 37, 0.08);
+    transition: transform 0.5s ease,
+                box-shadow 0.5s ease;
+}
+
+.galeria-container img:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(114, 47, 55, 0.15);
+}
+
+/* Desplazamiento suave entre secciones */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Barra animada de servicios */
+
+.barra-servicios {
+    width: 100%;
+    overflow: hidden;
+    background-color: #722F37;
+    color: #F9F6F1;
+    padding: 15px 0;
+}
+
+.barra-contenido {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: max-content;
+    white-space: nowrap;
+    animation: mover-barra 18s linear infinite;
+}
+
+.barra-contenido span {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    flex-shrink: 0;
+} 
+
+.barra-contenido span {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* Movimiento de derecha a izquierda */
+
+@keyframes mover-barra {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+ 
+/* Detalles delicados de la sección de reservas */
+
+.contacto {
+    position: relative;
+    padding: 85px 20px;
+    background:
+        linear-gradient(
+            180deg,
+            #F9F6F1 0%,
+            #F3ECE5 100%
+        );
+}
+
+/* Título y texto */
+
+/* Título y texto de la sección de reservas */
+
+.contacto .subtitulo {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contacto h2 {
+    color: #722F37;
+    font-size: 40px;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 35px;
+}
+
+.contacto .contacto-descripcion {
+    color: #625B58;
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 40px;
+} 
+
+/* Tarjeta del formulario */
+
+.formulario-reserva {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 42px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid #E8DAD2;
+    border-radius: 16px;
+    box-shadow: 0 15px 45px rgba(73, 45, 39, 0.06);
+    text-align: left;
+} 
+
+/* Etiquetas */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.campo label {
+    display: block;
+    color: #722F37;
+    font-size: 12px;
+    letter-spacing: 0.7px;
+    text-align: left;
+}
+.campo input,
+.campo select,
+.campo textarea {
+    display: block;
+    width: 100%;
+    padding: 15px 16px;
+    border: 1px solid #E8DAD2;
+    border-radius: 8px;
+    background-color: #FDFBF9;
+    color: #292525;
+    font-family: Georgia, serif;
+    font-size: 13px;
+}
+
+.campo textarea {
+    height: 120px;
+    resize: none;
+}  
+/* Botón de reserva */
+
+.formulario-reserva .boton {
+    display: block;
+    width: 100%;
+    padding: 17px 25px;
+    border: none;
+    border-radius: 30px;
+    background-color: #722F37;
+    color: #FFFFFF;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.formulario-reserva .boton:hover {
+    background-color: #54232B;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(114, 47, 55, 0.18);
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 600px) {
+    .contacto {
+        padding: 55px 18px;
+    }
+
+    .contacto h2 {
+        font-size: 32px;
+    }
+
+    .formulario-reserva {
+        padding: 25px 20px;
+    }
+}
+
+/* Tarjetas de la galería */
+
+
+/* Tarjetas de la galería */
+
+.foto-card {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 25px rgba(41, 37, 37, 0.08);
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.foto-card img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.foto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(114, 47, 55, 0.14);
+}
+
+.foto-card:hover img {
+    transform: scale(1.04);
+} 
+
+.foto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(114, 47, 55, 0.14);
+}
+
+.foto-card:hover img {
+    transform: scale(1.04);
+}
+
+/* Información debajo de cada foto */
+
+.foto-info {
+    padding: 20px 15px 22px;
+    text-align: left;
+    background-color: #FFFFFF;
+}
+
+.foto-info p {
+    margin-bottom: 8px;
+    color: #8D6265;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.foto-info h3 {
+    color: #722F37;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-weight: normal;
+}
+
+/* Adaptación de la galería */
+
+@media (max-width: 800px) {
+    .galeria-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 520px) {
+    .galeria-container {
+        grid-template-columns: 1fr;
+        max-width: 340px;
+        gap: 24px;
+    }
+
+    .foto-card img {
+        height: 360px;
+    }
+}
+
+/* Animación de entrada de las tarjetas */
+
+@keyframes aparecer-tarjeta {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.foto-card {
+    animation: aparecer-tarjeta 0.8s ease both;
+}
+
+.foto-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.foto-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.foto-card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.foto-card:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.foto-card:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+/* Respetar las preferencias de movimiento */
+
+@media (prefers-reduced-motion: reduce) {
+    .foto-card {
+        animation: none;
+        transition: none;
+    }
+
+    .foto-card img {
+        transition: none;
+    }
+}
+/* ACCIONES DEL HEADER */
+
+.header-acciones {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.mi-cuenta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #292525;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+.mi-cuenta:hover {
+    color: #722F37;
+}
+
+.btn-suscripcion {
+    display: inline-block;
+    padding: 11px 20px;
+    background-color: #722F37;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-suscripcion:hover {
+    background-color: #542B35;
+} 
+/* Espacio para los enlaces internos */
+
+#inicio,
+#servicios,
+#galeria,
+#contacto {
+    scroll-margin-top: 160px;
+}
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+/* HEADER COMPACTO AL HACER SCROLL */
+
+header.header-compacto {
+    padding: 8px 8%;
+    gap: 8px;
+    box-shadow: 0 4px 20px rgba(41, 37, 37, 0.06);
+}
+
+header.header-compacto .logo {
+    font-size: 30px;
+}
+
+header.header-compacto .header-superior {
+    padding-bottom: 6px;
+}
+/* HEADER RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 12px 5%;
+        gap: 12px;
+    }
+
+    .header-superior {
+        flex-direction: column;
+        gap: 12px;
+        padding-bottom: 12px;
+    }
+
+    .logo {
+        font-size: 30px;
+        letter-spacing: 4px;
+        text-align: center;
+    }
+
+    .header-acciones {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .mi-cuenta {
+        font-size: 11px;
+    }
+
+    .btn-suscripcion {
+        padding: 9px 14px;
+        font-size: 10px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+}
+/* Botón del menú móvil */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #722F37;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* Menú hamburguesa para celulares */
+
+@media (max-width: 600px) {
+
+    .header-superior {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .logo {
+        font-size: 26px;
+        letter-spacing: 3px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .header-acciones {
+        display: none;
+    }
+    header.header-compacto .logo {
+        font-size: 24px;
+    } 
+
+/* Mostrar navegación cuando el menú está abierto */
+
+@media (max-width: 600px) {
+
+    header nav.menu-abierto {
+        display: block;
+        width: 100%;
+        padding: 20px 0;
+        border-top: 1px solid #D8C8BF;
+    }
+
+    header nav.menu-abierto ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+
+    header nav.menu-abierto .opcion-movil {
+        display: block;
+    }
+
+}
+
+header nav .opcion-movil:first-of-type {
+    margin-top: 10px;
+}
+
+.suscripcion-movil {
+    display: inline-block;
+    background-color: #722F37;
+    color: #FFFFFF;
+    padding: 11px 24px;
+    border-radius: 4px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+header nav .suscripcion-movil {
+    color: #FFFFFF;
+} 
+
+}
+/* Opciones exclusivas del menú móvil */
+
+.opcion-movil {
+    display: none;
+}
+/* =========================
+   NEWSLETTER - MAISON CLUB
+========================= */
+
+.newsletter {
+    padding: 100px 8%;
+    background-color: #F9F6F1;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+.newsletter-etiqueta {
+    color: #722F37;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.newsletter h2 {
+    max-width: 650px;
+    color: #292525;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.newsletter-descripcion {
+    max-width: 520px;
+    color: #6D625D;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.newsletter-nota {
+    color: #8B7C76;
+    font-size: 11px;
+    letter-spacing: 0.3px;
+}
+/* FORMULARIO DE SUSCRIPCIÓN */
+
+#formulario-newsletter {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 420px;
+    gap: 12px;
+}
+
+#formulario-newsletter label {
+    font-size: 12px;
+    color: #6D625D;
+    text-align: left;
+}
+
+#formulario-newsletter input {
+    width: 100%;
+    padding: 16px 18px;
+    border: 1px solid #E8DAD2;
+    border-radius: 4px;
+    background-color: #FDFBF9;
+    color: #292525;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#formulario-newsletter input:focus {
+    border-color: #722F37;
+}
+
+#formulario-newsletter button {
+    width: 100%;
+    padding: 17px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #722F37;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+#formulario-newsletter button:hover {
+    background-color: #542128;
+    transform: translateY(-2px);
+}
+
+/* CASILLA DE CONSENTIMIENTO */
+
+.newsletter-consentimiento {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: left;
+    margin: 6px 0;
+}
+
+#formulario-newsletter .newsletter-consentimiento input {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    accent-color: #722F37;
+    cursor: pointer;
+}
+
+#formulario-newsletter .newsletter-consentimiento label {
+    color: #6D625D;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+/* MENSAJES DE SUSCRIPCIÓN */
+
+.mensaje-newsletter {
+    width: 100%;
+    max-width: 420px;
+    padding: 22px 20px;
+
+    border: 1px solid #D8C8BF;
+    border-radius: 4px;
+
+    color: #722F37;
+    background-color: #FDFBF9;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.mensaje-newsletter[hidden] {
+    display: none;
+}
+
+.mensaje-newsletter.error {
+    color: #9B3030;
+    border-color: #D9AAAA;
+}
+
+/* ==================================
+   MI CUENTA - VENTANA MODAL
+================================== */
+
+.modal-cuenta[hidden],
+.formulario-cuenta[hidden] {
+    display: none;
+}
+
+.modal-cuenta {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(25, 20, 20, 0.65);
+}
+
+/* TARJETA CENTRAL DE MI CUENTA */
+
+.modal-contenido {
+    width: 100%;
+    max-width: 440px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 40px 35px;
+    background-color: #FDFBF9;
+    border: 1px solid #E8DAD2;
+    border-radius: 4px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+/* ENCABEZADO DE MI CUENTA */
+
+.modal-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.modal-encabezado span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #722F37;
+    text-transform: uppercase;
+}
+
+.cerrar-modal {
+    border: none;
+    background: transparent;
+    color: #292525;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* TITULO Y DESCRIPCION DE MI CUENTA */
+
+#titulo-cuenta {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #292525;
+    margin-bottom: 12px;
+}
+
+.modal-descripcion {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #766A64;
+    margin-bottom: 30px;
+}

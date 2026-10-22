@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison Nails | Nail Studio</title>
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Tipografías de Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Biblioteca de iconos Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+</head>
+<body>
+
+    
+<header>
+
+    <div class="header-superior">
+
+        <!-- LOGO -->
+        <a href="#inicio" class="logo">MAISON NAILS</a>
+
+        <!-- ACCESOS SUPERIORES -->
+        <div class="header-acciones">
+
+            <a href="#cuenta" class="mi-cuenta">
+                <i class="fa-regular fa-user"></i>
+                Mi cuenta
+            </a>
+
+            <a href="#suscripcion" class="btn-suscripcion">
+                Suscribirme
+            </a>
+
+        </div>
+
+        <!-- BOTÓN DEL MENÚ MÓVIL -->
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="menu-principal">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+    <!-- NAVEGACIÓN PRINCIPAL -->
+    <nav id="menu-principal">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+
+            <!-- OPCIONES PARA CELULARES -->
+            <li class="opcion-movil">
+                <a href="#cuenta">
+                    <i class="fa-regular fa-user"></i>
+                    Mi cuenta
+                </a>
+            </li>
+
+            <li class="opcion-movil">
+                <a href="#suscripcion" class="suscripcion-movil">
+                    Suscribirme
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+</header>  
+
+    <!-- AQUI VA MI CUENTA -->
+     
+
+<!-- AQUI VA MI CUENTA -->
+
+<div id="modal-cuenta" class="modal-cuenta" hidden>
+
+    <div class="modal-contenido">
+
+        <div class="modal-encabezado">
+
+            <span>MAISON NAILS · MEMBERS</span>
+
+            <button
+                type="button"
+                id="cerrar-cuenta"
+                class="cerrar-modal"
+                aria-label="Cerrar ventana de Mi cuenta">
+                &times;
+            </button>
+
+        </div>
+
+        <h2 id="titulo-cuenta">Tu espacio Maison.</h2>
+
+        <p class="modal-descripcion">
+            Un espacio pensado exclusivamente para vos.
+        </p>
+
+        
+<!-- PESTAÑAS DE MI CUENTA -->
+
+<div class="cuenta-pestanas">
+
+    <button
+        type="button"
+        id="pestana-login"
+        class="pestana-activa">
+        Iniciar sesión
+    </button>
+
+    <button
+        type="button"
+        id="pestana-registro">
+        Crear cuenta
+    </button>
+
+</div> 
+
+
+<!-- FORMULARIO DE INICIO DE SESIÓN -->
+
+<form id="formulario-login" class="formulario-cuenta">
+
+    <label for="login-email">
+        Correo electrónico
+    </label>
+
+    <input
+        type="email"
+        id="login-email"
+        name="email"
+        autocomplete="email"
+        placeholder="tu@email.com"
+        required
+    >
+
+<label for="login-password">
+    Contraseña
+</label>
+
+    <input
+    type="password"
+    id="login-password"
+    name="password"
+    autocomplete="current-password"
+    placeholder="Ingresá tu contraseña"
+    required
+>
+
+    <button type="submit" class="btn-cuenta">
+    Ingresar a mi cuenta
+</button> 
+</form> 
+ 
+<!-- FORMULARIO DE REGISTRO -->
+
+<form id="formulario-registro" class="formulario-cuenta" hidden>
+
+    <label for="registro-email">
+        Correo electrónico
+    </label>
+
+    <input
+        type="email"
+        id="registro-email"
+        name="email"
+        autocomplete="email"
+        placeholder="tu@email.com"
+        required
+    >
+
+    
+<label for="registro-password">
+    Crear contraseña
+</label>
+
+<input
+    type="password"
+    id="registro-password"
+    name="password"
+    autocomplete="new-password"
+    placeholder="Mínimo 8 caracteres"
+    minlength="8"
+    required
+>  
+    <button type="submit" class="btn-cuenta">
+        Crear cuenta
+    </button> 
+
+</form>
+
+<!-- MENSAJES DE MI CUENTA -->
+
+<p id="mensaje-cuenta" class="mensaje-cuenta" role="status" aria-live="polite"></p>
+
+    </div>
+
+</div>
+ 
+
+    <div class="barra-servicios">
+        <div class="barra-contenido">
+            
+<span>MANICURA TRADICIONAL</span>
+<span>✦</span>
+<span>ESMALTADO SEMIPERMANENTE</span>
+<span>✦</span>
+<span>UÑAS ESCULPIDAS</span>
+<span>✦</span>
+<span>NAIL ART</span>
+<span>✦</span>
+<span>CUIDADO DE MANOS</span>
+<span>✦</span>
+<span>DISEÑOS PERSONALIZADOS</span>
+<span>✦</span>
+<span>MANICURA TRADICIONAL</span>
+<span>✦</span>
+<span>ESMALTADO SEMIPERMANENTE</span>
+<span>✦</span>
+<span>UÑAS ESCULPIDAS</span>
+<span>✦</span>
+<span>NAIL ART</span>
+<span>✦</span>
+<span>CUIDADO DE MANOS</span>
+<span>✦</span>
+<span>DISEÑOS PERSONALIZADOS</span>
+<span>✦</span>
+
+        </div>
+    </div>
+
+    <main>
+        <section id="inicio" class="hero">
+
+            <p class="subtitulo">NAIL CARE & BEAUTY</p>
+
+            <h1>La belleza está en los detalles.</h1>
+
+            <p class="descripcion">
+                Un espacio dedicado al cuidado de tus manos,
+                donde la elegancia y el detalle se encuentran.
+            </p>
+
+            <a href="#contacto" class="boton">Reservar turno</a>
+
+        </section>
+        
+        
+        <section id="galeria" class="galeria">
+
+            <p class="subtitulo">NUESTRO TRABAJO</p>
+
+            <h2>Detalles que enamoran</h2>
+
+            
+<div class="galeria-container">
+
+    <article class="foto-card">
+        <img src="assets/img/image-1.jpg" alt="Manicura tradicional con esmalte">
+        <div class="foto-info">
+            <p>01 — MANICURA</p>
+            <h3>Tradicional</h3>
+        </div>
+    </article>
+
+    <article class="foto-card">
+        <img src="assets/img/image-2.jpg" alt="Diseño de uñas con esmalte tradicional">
+        <div class="foto-info">
+            <p>02 — MANICURA</p>
+            <h3>Elegancia natural</h3>
+        </div>
+    </article>
+
+    <article class="foto-card">
+        <img src="assets/img/uñas-semi.jpg" alt="Manicura con esmalte semipermanente">
+        <div class="foto-info">
+            <p>03 — ESMALTADO</p>
+            <h3>Semipermanente</h3>
+        </div>
+    </article>
+
+    <article class="foto-card">
+        <img src="assets/img/esculpidas-1.jpg" alt="Uñas esculpidas con diseño elegante">
+        <div class="foto-info">
+            <p>04 — DISEÑO</p>
+            <h3>Uñas esculpidas</h3>
+        </div>
+    </article>
+
+    <article class="foto-card">
+        <img src="assets/img/esculpidas-2.jpg" alt="Diseño de uñas esculpidas">
+        <div class="foto-info">
+            <p>05 — DETALLES</p>
+            <h3>Diseños únicos</h3>
+        </div>
+    </article>
+
+<article class="foto-card">
+    <img src="assets/img/limpieza-facial.jpg" alt="Tratamiento de limpieza facial">
+    <div class="foto-info">
+        <p>06 — SKIN CARE</p>
+        <h3>Limpieza facial</h3>
+    </div>
+</article>
+
+</div> 
+
+        </section> 
+
+        <section id="servicios" class="servicios">
+
+            <p class="subtitulo">NUESTROS SERVICIOS</p>
+
+            <h2>Un momento para vos</h2>
+
+            <div class="servicios-container">
+
+                <article class="servicio">
+                    <h3>Manicura tradicional</h3>
+                    <p>Cuidado y belleza para tus uñas naturales.</p>
+                </article>
+
+                <article class="servicio">
+                    <h3>Semipermanente</h3>
+                    <p>Color impecable y brillo por más tiempo.</p>
+                </article>
+
+                <article class="servicio">
+                    <h3>Esculpidas</h3>
+                    <p>Diseño y elegancia para lucir tus uñas.</p>
+                </article>
+
+            </div>
+
+        </section> 
+        
+        
+<section id="contacto" class="contacto">
+    <p class="subtitulo">TU MOMENTO DE BELLEZA</p>
+
+    <h2>Reservá tu turno</h2>
+
+    <p class="contacto-descripcion">
+        Elegí tu servicio y coordinemos un momento especial para vos.
+    </p>
+
+    <form class="formulario-reserva" id="formulario-reserva">
+
+        <div class="campo">
+            <label for="nombre">Nombre y apellido</label>
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Escribí tu nombre"
+                required
+            >
+        </div>
+
+        <div class="campo">
+            <label for="servicio">¿Qué servicio te gustaría?</label>
+            <select id="servicio" name="servicio" required>
+                <option value="">Seleccioná un servicio</option>
+                <option value="Manicura tradicional">Manicura tradicional</option>
+                <option value="Semipermanente">Semipermanente</option>
+                <option value="Uñas esculpidas">Uñas esculpidas</option>
+                <option value="Limpieza facial">Limpieza facial</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="fecha">Fecha preferida</label>
+            <input
+                type="date"
+                id="fecha"
+                name="fecha"
+                required
+            >
+        </div>
+
+        <div class="campo">
+            <label for="horario">Horario preferido</label>
+            <select id="horario" name="horario" required>
+                <option value="">Seleccioná un horario</option>
+                <option value="Mañana">Mañana</option>
+                <option value="Tarde">Tarde</option>
+                <option value="A coordinar">A coordinar</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="mensaje">¿Querés contarnos algo más? (opcional)</label>
+            <textarea
+                id="mensaje"
+                name="mensaje"
+                placeholder="Contanos si tenés algún diseño en mente..."
+                rows="4"
+            ></textarea>
+        </div>
+
+        <button type="submit" class="boton">
+            Solicitar turno
+        </button>
+
+    </form>
+</section>
+ <!-- SUSCRIPCIÓN A NOVEDADES -->
+
+<section id="suscripcion" class="newsletter">
+
+    <p class="newsletter-etiqueta">THE MAISON CLUB</p>
+
+    <h2>Un pequeño lujo en tu bandeja de entrada.</h2>
+
+    <p class="newsletter-descripcion">
+        Suscribite para descubrir nuestras novedades,
+        promociones exclusivas y todo lo que sucede en Maison Nails.
+    </p>
+
+    <form id="formulario-newsletter">
+
+        <label for="email-newsletter">Tu correo electrónico</label>
+
+        <input
+            type="email"
+            id="email-newsletter"
+            name="email"
+            placeholder="nombre@ejemplo.com"
+            autocomplete="email"
+            required
+        >
+        <div class="newsletter-consentimiento">
+
+    <input
+        type="checkbox"
+        id="consentimiento-newsletter"
+        name="consentimiento"
+        required
+    >
+
+    <label for="consentimiento-newsletter">
+        Acepto recibir novedades, promociones y comunicaciones
+        de Maison Nails por correo electrónico.
+    </label>
+
+</div>
+        <button type="submit">
+            Quiero suscribirme
+        </button>
+
+    </form>
+    <!-- MENSAJE DE ESTADO DE LA SUSCRIPCIÓN -->
+
+<p
+    id="mensaje-newsletter"
+    class="mensaje-newsletter"
+    role="status"
+    aria-live="polite"
+    hidden>
+</p>
+
+    <p class="newsletter-nota">
+        Belleza, inspiración y novedades. Sin spam.
+    </p>
+
+</section>
+
+    </main> 
+    <footer class="footer">
+        <p>MAISON NAILS</p>
+        <p>La belleza está en los detalles.</p>
+        <p>&copy; 2026 Maison Nails. Todos los derechos reservados.</p>
+    </footer> 
+
+    <!-- Biblioteca de Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- Mi JavaScript -->
+<script src="./script.js"></script> 
+
+</body>
+</html>
