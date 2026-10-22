@@ -33,10 +33,19 @@
         <!-- ACCESOS SUPERIORES -->
         <div class="header-acciones">
 
-            <a href="#cuenta" class="mi-cuenta">
-                <i class="fa-regular fa-user"></i>
-                Mi cuenta
-            </a>
+            
+<a href="#cuenta" class="mi-cuenta">
+    <i class="fa-regular fa-user"></i>
+
+    <span>Mi cuenta</span>
+
+    <span
+        id="indicador-sesion"
+        class="indicador-sesion"
+        hidden>
+    </span>
+</a>
+
 
             <a href="#suscripcion" class="btn-suscripcion">
                 Suscribirme
@@ -210,6 +219,26 @@
 
 <p id="mensaje-cuenta" class="mensaje-cuenta" role="status" aria-live="polite"></p>
 
+<!-- ESPACIO PERSONAL DEL USUARIO -->
+
+<div id="panel-usuario" class="panel-usuario" hidden>
+
+    <span class="panel-etiqueta">BIENVENIDA A MAISON NAILS</span>
+
+    <h3>Tu espacio personal.</h3>
+
+    <p id="email-usuario"></p>
+
+    <button
+        type="button"
+        id="cerrar-sesion"
+        class="btn-cerrar-sesion">
+        Cerrar sesión
+    </button>
+
+</div>
+
+
     </div>
 
 </div>
@@ -320,6 +349,32 @@
     </div>
 </article>
 
+<!-- IMAGEN 7 -->
+<article class="foto-card">
+    <img
+        src="assets/img/limpieza-profunda.jpg"
+        alt="Tratamiento de limpieza profunda"
+    >
+
+    <div class="foto-info">
+        <p>07 — SKIN CARE</p>
+        <h3>Limpieza profunda</h3>
+    </div>
+</article>
+
+<!-- IMAGEN 8 -->
+<article class="foto-card">
+    <img
+        src="assets/img/estetica.jpg"
+        alt="Tratamiento de estética y belleza"
+    >
+
+    <div class="foto-info">
+        <p>08 — BEAUTY</p>
+        <h3>Estética y belleza</h3>
+    </div>
+</article> 
+
 </div> 
 
         </section> 
@@ -332,20 +387,60 @@
 
             <div class="servicios-container">
 
-                <article class="servicio">
-                    <h3>Manicura tradicional</h3>
-                    <p>Cuidado y belleza para tus uñas naturales.</p>
-                </article>
+                
+<article class="servicio">
 
-                <article class="servicio">
-                    <h3>Semipermanente</h3>
-                    <p>Color impecable y brillo por más tiempo.</p>
-                </article>
+    <img
+        src="assets/img/image-1.jpg"
+        alt="Servicio de manicura tradicional"
+    >
 
-                <article class="servicio">
-                    <h3>Esculpidas</h3>
-                    <p>Diseño y elegancia para lucir tus uñas.</p>
-                </article>
+    <h3>Manicura tradicional</h3>
+
+    <p>Cuidado y belleza para tus uñas naturales.</p>
+
+    <a href="#contacto" class="boton-servicio">
+        Reservar turno
+    </a>
+
+</article> 
+
+            
+<article class="servicio">
+
+    <img
+        src="assets/img/uñas-semi.jpg"
+        alt="Servicio de esmaltado semipermanente"
+    >
+
+    <h3>Semipermanente</h3>
+
+    <p>Color impecable y brillo por más tiempo.</p>
+
+    <a href="#contacto" class="boton-servicio">
+        Reservar turno
+    </a>
+
+</article>
+
+
+                
+<article class="servicio">
+
+    <img
+        src="assets/img/esculpidas-1.jpg"
+        alt="Servicio de uñas esculpidas"
+    >
+
+    <h3>Uñas esculpidas</h3>
+
+    <p>Diseño y elegancia para lucir tus uñas.</p>
+
+    <a href="#contacto" class="boton-servicio">
+        Reservar turno
+    </a>
+
+</article>
 
             </div>
 
@@ -373,6 +468,48 @@
                 required
             >
         </div>
+        
+<div class="campo">
+    <label for="email-reserva">Correo electrónico</label>
+
+    <input
+        type="email"
+        id="email-reserva"
+        name="email"
+        placeholder="tu@email.com"
+        autocomplete="email"
+        required
+    >
+</div> 
+
+<div class="campo">
+    <label for="telefono">Teléfono de contacto</label>
+
+    <input
+        type="tel"
+        id="telefono"
+        name="telefono"
+        placeholder="Ej: 1123456789"
+        inputmode="numeric"
+        pattern="[0-9]{8,15}"
+        title="Ingresá entre 8 y 15 números, sin espacios ni guiones"
+        autocomplete="tel"
+        required
+    >
+</div>
+
+<div class="campo campo-checkbox">
+    <label for="confirmacion-reserva">
+        <input
+            type="checkbox"
+            id="confirmacion-reserva"
+            name="confirmacion"
+            value="si"
+        >
+        Deseo recibir una confirmación de mi solicitud por correo electrónico.
+    </label>
+</div>
+
 
         <div class="campo">
             <label for="servicio">¿Qué servicio te gustaría?</label>
@@ -418,6 +555,10 @@
         <button type="submit" class="boton">
             Solicitar turno
         </button>
+        
+        <button type="reset" class="boton-limpiar">
+        Limpiar formulario
+    </button>
 
     </form>
 </section>

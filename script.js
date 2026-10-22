@@ -52,6 +52,8 @@ function actualizarHeader() {
 
 }
 
+// window.addEventListener("scroll", actualizarHeader);
+
 window.addEventListener("scroll", actualizarHeader);
 
 actualizarHeader();
@@ -167,3 +169,215 @@ formularioNewsletter.reset();
 
 console.log("MAISON NAILS: JavaScript llegó hasta el final"); 
 });
+
+/* MI CUENTA — ABRIR Y CERRAR VENTANA */
+
+const modalCuenta = document.getElementById("modal-cuenta");
+const cerrarCuenta = document.getElementById("cerrar-cuenta");
+
+cerrarCuenta.addEventListener("click", () => {
+    modalCuenta.hidden = true;
+    document.body.classList.remove("modal-abierto");
+});
+
+/* MI CUENTA — ABRIR VENTANA */
+
+const abrirCuenta = document.querySelector(".mi-cuenta");
+
+abrirCuenta.addEventListener("click", async (evento) => {
+    evento.preventDefault();
+
+    modalCuenta.hidden = false;
+    document.body.classList.add("modal-abierto");
+
+    await actualizarEstadoCuenta();
+});
+
+
+/* MI CUENTA — CAMBIAR ENTRE PESTAÑAS */
+
+const pestanaLogin = document.getElementById("pestana-login");
+const pestanaRegistro = document.getElementById("pestana-registro");
+
+const formularioLogin = document.getElementById("formulario-login");
+const formularioRegistro = document.getElementById("formulario-registro");
+
+const mensajeCuenta = document.getElementById("mensaje-cuenta");
+
+pestanaLogin.addEventListener("click", () => {
+    formularioLogin.hidden = false;
+    formularioRegistro.hidden = true;
+
+    pestanaLogin.classList.add("pestana-activa");
+    pestanaRegistro.classList.remove("pestana-activa");
+
+    mensajeCuenta.textContent = "";
+});
+
+pestanaRegistro.addEventListener("click", () => {
+    formularioLogin.hidden = true;
+    formularioRegistro.hidden = false;
+
+    pestanaRegistro.classList.add("pestana-activa");
+    pestanaLogin.classList.remove("pestana-activa");
+
+    mensajeCuenta.textContent = "";
+});
+
+/* MI CUENTA — REGISTRO DE USUARIOS */
+
+formularioRegistro.addEventListener("submit", async (evento) => {
+    evento.preventDefault();
+
+    const email = document.getElementById("registro-email").value.trim();
+    const password = document.getElementById("registro-password").value;
+
+    mensajeCuenta.classList.remove("error");
+    mensajeCuenta.textContent = "Estamos creando tu cuenta...";
+
+    const { data, error } = await supabaseClient.auth.signUp({
+        email: email,
+        password: password
+    });
+
+    if (error) {
+        mensajeCuenta.classList.add("error");
+        mensajeCuenta.textContent = error.message;
+        return;
+    }
+
+    mensajeCuenta.textContent =
+        "¡Gracias por unirte a Maison Nails! Revisá tu correo electrónico para confirmar tu cuenta.";
+
+    formularioRegistro.reset();
+});
+
+/* MI CUENTA — INICIAR SESIÓN */
+
+formularioLogin.addEventListener("submit", async (evento) => {
+    evento.preventDefault();
+
+    const email = document.getElementById("login-email").value.trim();
+    const password = document.getElementById("login-password").value;
+
+    mensajeCuenta.classList.remove("error");
+    mensajeCuenta.textContent = "Estamos verificando tus datos...";
+
+    const { data, error } = await supabaseClient.auth.signInWithPassword({
+        email: email,
+        password: password
+    });
+
+    if (error) {
+        mensajeCuenta.classList.add("error");
+        mensajeCuenta.textContent =
+            "No pudimos iniciar sesión. Revisá tu correo y contraseña.";
+        return;
+    }
+
+    mensajeCuenta.textContent = "¡Bienvenida a Maison Nails! Tu sesión se inició correctamente.";
+
+    formularioLogin.reset();
+    await actualizarEstadoCuenta();
+});
+
+/* MI CUENTA — MOSTRAR ESPACIO PERSONAL */
+
+const panelUsuario = document.getElementById("panel-usuario");
+const emailUsuario = document.getElementById("email-usuario");
+const pestanasCuenta = document.querySelector(".cuenta-pestanas");
+
+
+const indicadorSesion = document.getElementById("indicador-sesion");
+async function actualizarEstadoCuenta() {
+
+    const { data: { user } } = await supabaseClient.auth.getUser();
+
+    if (user) {
+        indicadorSesion.hidden = false; 
+        // Usuario con sesión iniciada
+        formularioLogin.hidden = true;
+        formularioRegistro.hidden = true;
+        pestanasCuenta.hidden = true;
+
+        panelUsuario.hidden = false;
+        emailUsuario.textContent = user.email;
+
+    } else {
+        indicadorSesion.hidden = true;
+        // Usuario sin sesión iniciada
+        panelUsuario.hidden = true;
+        pestanasCuenta.hidden = false;
+
+        formularioLogin.hidden = false;
+        formularioRegistro.hidden = true;
+
+        pestanaLogin.classList.add("pestana-activa");
+        pestanaRegistro.classList.remove("pestana-activa");
+    }
+}
+
+/* MI CUENTA — CERRAR SESIÓN */
+
+const botonCerrarSesion = document.getElementById("cerrar-sesion");
+
+botonCerrarSesion.addEventListener("click", async () => {
+
+    const { error } = await supabaseClient.auth.signOut();
+
+    if (error) {
+        mensajeCuenta.classList.add("error");
+        mensajeCuenta.textContent =
+            "No pudimos cerrar tu sesión. Intentá nuevamente.";
+        return;
+    }
+
+    mensajeCuenta.classList.remove("error");
+    mensajeCuenta.textContent = "";
+
+    await actualizarEstadoCuenta();
+
+});
+
+/* COMPROBAR LA SESIÓN AL CARGAR LA PÁGINA */
+
+actualizarEstadoCuenta();
+
+/* DETECTAR CAMBIOS DE SESIÓN EN SUPABASE */
+
+supabaseClient.auth.onAuthStateChange((evento, sesion) => {
+    indicadorSesion.hidden = !sesion?.user;
+});
+
+
+/* CERRAR MI CUENTA AL HACER CLIC FUERA */
+
+modalCuenta.addEventListener("click", (evento) => {
+    if (evento.target === modalCuenta) {
+        modalCuenta.hidden = true;
+        document.body.classList.remove("modal-abierto");
+    }
+});
+
+/* CERRAR MI CUENTA CON LA TECLA ESCAPE */
+
+document.addEventListener("keydown", (evento) => {
+    if (evento.key === "Escape" && !modalCuenta.hidden) {
+        modalCuenta.hidden = true;
+        document.body.classList.remove("modal-abierto");
+    }
+});
+// Evitar reservas en fechas anteriores a hoy
+const campoFecha = document.getElementById("fecha");
+
+if (campoFecha) {
+    const hoy = new Date();
+
+    const fechaLocal = [
+        hoy.getFullYear(),
+        String(hoy.getMonth() + 1).padStart(2, "0"),
+        String(hoy.getDate()).padStart(2, "0")
+    ].join("-");
+
+    campoFecha.min = fechaLocal;
+}
