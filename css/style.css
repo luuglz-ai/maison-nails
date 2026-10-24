@@ -1,5 +1,5 @@
 
-/* Estilos generales de Maison Nails */
+/* General */ 
 
 * {
     margin: 0;
@@ -8,31 +8,35 @@
 }
 
 body {
-    background: 
-    radial-gradient(
-        ellipse at 10% 15%,
-        rgba(218, 180, 171, 0.20),
-        transparent 40%
-    ),
-    radial-gradient(
-        ellipse at 90% 55%,
-        rgba(203, 174, 153, 0.18),
-        transparent 38%
-    ),
-    #F9F3EE;
-
-    color: #292525;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background-image: radial-gradient(
-    rgba(114, 47, 55, 0.035) 0.5px,
-    transparent 0.5px
-);
+    color: #292525;
 
-background-size: 7px 7px;  
-} 
+    background-color: #F9F3EE;
 
-/* Encabezado */
+    background-image:
+        radial-gradient(
+            rgba(114, 47, 55, 0.035) 0.5px,
+            transparent 0.5px
+        ),
+        radial-gradient(
+            ellipse at 10% 15%,
+            rgba(218, 180, 171, 0.20),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 90% 55%,
+            rgba(203, 174, 153, 0.18),
+            transparent 38%
+        );
+
+    background-size:
+        7px 7px,
+        auto,
+        auto;
+}  
+
+/* Header */
 
 header {
     display: flex;
@@ -85,7 +89,7 @@ nav a:hover {
     color: #722F37;
 } 
 
-/* Portada principal */
+/* Hero Section */
 
 .hero {
     min-height: auto;
@@ -95,8 +99,7 @@ nav a:hover {
     align-items: center;
     text-align: center;
     padding: 35px 20px 30px;
-}
-/* Subtítulo editorial del Hero */
+} 
 
 .subtitulo {
     display: flex;
@@ -153,7 +156,7 @@ nav a:hover {
     background-color: #512129;
 }
 
-/* Sección de servicios */
+/* Servicios */
 
 .servicios {
     padding: 50px 8% 25px;
@@ -169,8 +172,7 @@ nav a:hover {
     line-height: 1.2;
     margin-bottom: 35px;
 } 
-
-/* SERVICIOS - MOBILE FIRST */
+ 
 
 .servicios-container {
     display: flex;
@@ -211,8 +213,7 @@ nav a:hover {
 .servicio:hover {
     transform: translateY(-5px);
 }
-
-/* IMÁGENES DE LAS TARJETAS DE SERVICIOS */
+ 
 
 .servicio img {
     display: block;
@@ -221,9 +222,7 @@ nav a:hover {
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 25px;
-}
-
-/* BOTONES DE LAS TARJETAS */
+} 
 
 .boton-servicio {
     display: inline-block;
@@ -246,14 +245,13 @@ nav a:hover {
     color: #FFFFFF;
 }
 
-/* Galería de trabajos */
+/* Galería */
 
 .galeria {
     padding: 25px 8% 70px;
     text-align: center;
 }
- 
-/* GALERÍA - MOBILE FIRST */
+
 
 .galeria-container {
     display: flex;
@@ -286,15 +284,13 @@ nav a:hover {
 .galeria-container img:hover {
     transform: translateY(-6px) scale(1.02);
     box-shadow: 0 15px 30px rgba(114, 47, 55, 0.15);
-}
-
-/* Desplazamiento suave entre secciones */
+} 
 
 html {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
 }
 
-/* Barra animada de servicios */
+/* Barra de servicios */
 
 .barra-servicios {
     width: 100%;
@@ -320,8 +316,7 @@ html {
     letter-spacing: 2px;
     flex-shrink: 0;
 }
-
-/* Movimiento de derecha a izquierda */
+ 
 
 @keyframes mover-barra {
     from {
@@ -333,7 +328,7 @@ html {
     }
 }
  
-/* Detalles delicados de la sección de reservas */
+/* Reservas */
 
 .contacto {
     position: relative;
@@ -344,11 +339,7 @@ html {
             #F9F6F1 0%,
             #F3ECE5 100%
         );
-}
-
-/* Título y texto */
-
-/* Título y texto de la sección de reservas */
+} 
 
 .contacto .subtitulo {
     text-align: center;
@@ -375,8 +366,7 @@ html {
     max-width: 500px;
     margin: 0 auto 40px;
 } 
-
-/* Tarjeta del formulario */
+ 
 
 .formulario-reserva {
     width: 100%;
@@ -389,8 +379,7 @@ html {
     box-shadow: 0 15px 45px rgba(73, 45, 39, 0.06);
     text-align: left;
 } 
-
-/* Etiquetas */
+ 
 
 .campo {
     display: flex;
@@ -424,8 +413,7 @@ html {
 .campo textarea {
     height: 120px;
     resize: none;
-}  
-/* Botón de reserva */
+}   
 
 .formulario-reserva .boton {
     display: inline-block;
@@ -448,9 +436,7 @@ html {
     background-color: #54232B;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(114, 47, 55, 0.18);
-}
-
-/* Adaptación para celulares */
+} 
 
 @media (max-width: 600px) {
     .contacto {
@@ -466,10 +452,7 @@ html {
     }
 } 
 
-/* Tarjetas de la galería */
-
-
-/* Tarjetas de la galería */
+/* Tarjetas */
 
 .foto-card {
     position: relative;
@@ -497,9 +480,7 @@ html {
 
 .foto-card:hover img {
     transform: scale(1.04);
-}
-
-/* Información debajo de cada foto */
+} 
 
 .foto-info {
     padding: 20px 15px 22px;
@@ -520,7 +501,7 @@ html {
     font-size: 19px;
     font-weight: normal;
 }
- /* GALERÍA RESPONSIVE - MOBILE FIRST */
+ /* Galería responsive */
 
 /* Tablets */
 @media (min-width: 521px) {
@@ -551,7 +532,7 @@ html {
         height: 340px;
     }
 } 
-/* Animación de entrada de las tarjetas */
+/* Animaciones */
 
 @keyframes aparecer-tarjeta {
     from {
@@ -591,17 +572,12 @@ html {
 
 /* Respetar las preferencias de movimiento */
 
-@media (prefers-reduced-motion: reduce) {
-    .foto-card {
-        animation: none;
-        transition: none;
-    }
-
+@media (prefers-reduced-motion: reduce) { 
     .foto-card img {
         transition: none;
     }
-}
-/* ACCIONES DEL HEADER */
+} 
+/* Header */
 
 .header-acciones {
     display: flex;
@@ -637,8 +613,7 @@ html {
 
 .btn-suscripcion:hover {
     background-color: #542B35;
-} 
-/* Espacio para los enlaces internos */
+}  
 
 #inicio,
 #servicios,
@@ -651,7 +626,7 @@ html {
         scroll-behavior: auto;
     }
 }
-/* HEADER COMPACTO AL HACER SCROLL */
+/* Header compacto */
 
 header.header-compacto {
     padding: 8px 8%;
@@ -666,7 +641,7 @@ header.header-compacto .logo {
 header.header-compacto .header-superior {
     padding-bottom: 6px;
 }
-/* HEADER RESPONSIVE */
+/* Header responsive */
 
 @media (max-width: 600px) {
 
@@ -675,8 +650,7 @@ header.header-compacto .header-superior {
         gap: 12px;
     }
  
-}
-/* Botón del menú móvil */
+} 
 
 .menu-toggle {
     display: none;
@@ -686,7 +660,8 @@ header.header-compacto .header-superior {
     font-size: 24px;
     cursor: pointer;
 }
-/* Menú hamburguesa para celulares */
+ 
+/* Menú móvil */
 
 @media (max-width: 600px) {
 
@@ -715,13 +690,10 @@ header.header-compacto .header-superior {
     .header-acciones {
         display: none;
     }
+
     header.header-compacto .logo {
         font-size: 24px;
-    } 
-
-/* Mostrar navegación cuando el menú está abierto */
-
-@media (max-width: 600px) {
+    }
 
     header nav.menu-abierto {
         display: block;
@@ -759,18 +731,14 @@ header nav .opcion-movil:first-of-type {
 
 header nav .suscripcion-movil {
     color: #FFFFFF;
-} 
-
 }
-/* Opciones exclusivas del menú móvil */
 
 .opcion-movil {
     display: none;
 }
-/* =========================
-   NEWSLETTER - MAISON CLUB
-========================= */
 
+/* Newsletter */ 
+ 
 .newsletter {
     padding: 100px 8%;
     background-color: #F9F6F1;
@@ -811,8 +779,7 @@ header nav .suscripcion-movil {
     color: #8B7C76;
     font-size: 11px;
     letter-spacing: 0.3px;
-}
-/* FORMULARIO DE SUSCRIPCIÓN */
+} 
 
 #formulario-newsletter {
     display: flex;
@@ -865,9 +832,7 @@ header nav .suscripcion-movil {
 #formulario-newsletter button:hover {
     background-color: #542128;
     transform: translateY(-2px);
-}
-
-/* CASILLA DE CONSENTIMIENTO */
+} 
 
 .newsletter-consentimiento {
     display: flex;
@@ -892,9 +857,7 @@ header nav .suscripcion-movil {
     font-size: 11px;
     line-height: 1.6;
     cursor: pointer;
-}
-
-/* MENSAJES DE SUSCRIPCIÓN */
+} 
 
 .mensaje-newsletter {
     width: 100%;
@@ -922,9 +885,7 @@ header nav .suscripcion-movil {
     border-color: #D9AAAA;
 }
 
-/* ==================================
-   MI CUENTA - VENTANA MODAL
-================================== */
+/* Mi cuenta */
 
 .modal-cuenta[hidden],
 .formulario-cuenta[hidden] {
@@ -940,9 +901,7 @@ header nav .suscripcion-movil {
     align-items: center;
     padding: 20px;
     background-color: rgba(25, 20, 20, 0.65);
-}
-
-/* TARJETA CENTRAL DE MI CUENTA */
+} 
 
 .modal-contenido {
     width: 100%;
@@ -954,9 +913,7 @@ header nav .suscripcion-movil {
     border: 1px solid #E8DAD2;
     border-radius: 4px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
-}
-
-/* ENCABEZADO DE MI CUENTA */
+} 
 
 .modal-encabezado {
     display: flex;
@@ -982,9 +939,7 @@ header nav .suscripcion-movil {
     font-size: 26px;
     line-height: 1;
     cursor: pointer;
-}
-
-/* TITULO Y DESCRIPCION DE MI CUENTA */
+} 
 
 #titulo-cuenta {
     font-family: 'Cormorant Garamond', serif;
@@ -1002,9 +957,7 @@ header nav .suscripcion-movil {
     line-height: 1.7;
     color: #766A64;
     margin-bottom: 30px;
-}
-
-/* PESTAÑAS DE MI CUENTA */
+} 
 
 .cuenta-pestanas {
     display: flex;
@@ -1032,9 +985,7 @@ header nav .suscripcion-movil {
 .cuenta-pestanas button.pestana-activa {
     color: #722F37;
     border-bottom-color: #722F37;
-}
-
-/* FORMULARIOS DE MI CUENTA */
+} 
 
 .formulario-cuenta {
     display: flex;
@@ -1062,16 +1013,12 @@ header nav .suscripcion-movil {
     outline: none;
     box-sizing: border-box;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* EFECTO AL SELECCIONAR UN CAMPO */
+} 
 
 .formulario-cuenta input:focus {
     border-color: #722F37;
     box-shadow: 0 0 0 3px rgba(114, 47, 55, 0.10);
-}
-
-/* BOTONES DE MI CUENTA */
+} 
 
 .formulario-cuenta .btn-cuenta {
     width: 100%;
@@ -1095,8 +1042,7 @@ header nav .suscripcion-movil {
     border-color: #5A242C;
     transform: translateY(-2px);
 }
-
-/* MENSAJES DE MI CUENTA */
+/* Mensajes */
 
 .mensaje-cuenta {
     margin-top: 18px;
@@ -1104,10 +1050,8 @@ header nav .suscripcion-movil {
     font-size: 12px;
     line-height: 1.6;
     text-align: center;
-    color: #52745B;
-}
-
-/* MI CUENTA — MENSAJES ELEGANTES */
+    color: #722F37;
+} 
 
 .mensaje-cuenta:not(:empty) {
     padding: 14px 16px;
@@ -1120,27 +1064,13 @@ header nav .suscripcion-movil {
     border-color: #E7C4C8;
     background-color: #FFF5F5;
 }
-
-.mensaje-cuenta.error {
-    color: #A33D46;
-} 
-
-/* MENSAJES DEL FORMULARIO MI CUENTA */
-
-.mensaje-cuenta {
-    margin-top: 18px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    line-height: 1.6;
-    color: #722F37;
-    text-align: center;
-}
-
+ 
 .mensaje-cuenta.error {
     color: #B03A48;
 }
+ 
 
-/* MI CUENTA — ESPACIO PERSONAL */
+/* Panel de usuario */
 
 .panel-usuario[hidden] {
     display: none;
@@ -1196,15 +1126,11 @@ header nav .suscripcion-movil {
 .btn-cerrar-sesion:hover {
     background-color: #722F37;
     color: #FFFFFF;
-}
-
-/* OCULTAR LAS PESTAÑAS CUANDO HAY UNA SESIÓN ACTIVA */
+} 
 
 .cuenta-pestanas[hidden] {
     display: none;
-}
-
-/* MI CUENTA — INDICADOR DE SESIÓN */
+} 
 
 .indicador-sesion[hidden] {
     display: none;
@@ -1219,9 +1145,7 @@ header nav .suscripcion-movil {
     background-color: #722F37;
     box-shadow: 0 0 0 3px rgba(114, 47, 55, 0.10);
     vertical-align: middle;
-}
-
-/* MI CUENTA — DETALLE EDITORIAL */
+} 
 
 #titulo-cuenta::after {
     content: "";
@@ -1232,7 +1156,7 @@ header nav .suscripcion-movil {
     background-color: #722F37;
 }
 
-/* MI CUENTA — ANIMACIÓN DE ENTRADA */
+/* Animaciones */
 
 .modal-cuenta:not([hidden]) {
     animation: aparecerFondo 0.3s ease;
@@ -1266,18 +1190,27 @@ header nav .suscripcion-movil {
 
 @media (prefers-reduced-motion: reduce) {
     .modal-cuenta:not([hidden]),
-    .modal-cuenta:not([hidden]) .modal-contenido {
+    .modal-cuenta:not([hidden]) .modal-contenido,
+    .foto-card,
+    .barra-contenido {
         animation: none;
     }
-}
 
-/* BLOQUEAR EL FONDO CUANDO MI CUENTA ESTÁ ABIERTA */
+    .foto-card {
+        transition: none;
+    }
+
+    .barra-servicios {
+        overflow-x: auto;
+    }
+ 
+} 
 
 body.modal-abierto {
     overflow: hidden;
 }
 
-/* FORMULARIO DE RESERVAS — CHECKBOX */
+/* Reservas */
 
 .campo-checkbox label {
     display: flex;
@@ -1296,9 +1229,7 @@ body.modal-abierto {
     flex-shrink: 0;
     accent-color: #722F37;
     cursor: pointer;
-}
-
-/* BOTONES DEL FORMULARIO DE RESERVAS */
+} 
 
 .botones-formulario {
     display: flex;
@@ -1327,9 +1258,7 @@ body.modal-abierto {
 .boton-limpiar:hover {
     background-color: #722F37;
     color: #FFFFFF;
-}
-
-/* CORRECCIÓN DE ALINEACIÓN DE BOTONES */
+} 
 
 .botones-formulario .boton,
 .botones-formulario .boton-limpiar {
@@ -1343,7 +1272,7 @@ body.modal-abierto {
     text-align: center;
 }
 
-/* TARJETAS DE SERVICIOS - MOBILE FIRST */
+/* Servicios responsive */
 
 .servicio {
     width: 100%;
@@ -1357,7 +1286,7 @@ body.modal-abierto {
     }
 }   
 
-/* CORRECCIÓN DE BOTONES EN CELULARES */
+/* Botones responsive */
 
 @media (max-width: 600px) {
 

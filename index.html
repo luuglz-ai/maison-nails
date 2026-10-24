@@ -5,20 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maison Nails | Nail Studio</title>
-    
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Tipografías de Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-    <!-- Biblioteca de iconos Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
@@ -27,10 +22,9 @@
 
     <div class="header-superior">
 
-        <!-- LOGO -->
-        <a href="#inicio" class="logo">MAISON NAILS</a>
 
-        <!-- ACCESOS SUPERIORES -->
+        <a href="#inicio" class="logo">MAISON NAILS</a>
+ 
         <div class="header-acciones">
 
             
@@ -52,8 +46,7 @@
             </a>
 
         </div>
-
-        <!-- BOTÓN DEL MENÚ MÓVIL -->
+ 
         <button
             class="menu-toggle"
             type="button"
@@ -66,8 +59,7 @@
         </button>
 
     </div>
-
-    <!-- NAVEGACIÓN PRINCIPAL -->
+ 
     <nav id="menu-principal">
         <ul>
             <li><a href="#inicio">Inicio</a></li>
@@ -75,7 +67,7 @@
             <li><a href="#galeria">Galería</a></li>
             <li><a href="#contacto">Contacto</a></li>
 
-            <!-- OPCIONES PARA CELULARES -->
+    
             <li class="opcion-movil">
                 <a href="#cuenta">
                     <i class="fa-regular fa-user"></i>
@@ -91,12 +83,7 @@
         </ul>
     </nav>
 
-</header>  
-
-    <!-- AQUI VA MI CUENTA -->
-     
-
-<!-- AQUI VA MI CUENTA -->
+</header> 
 
 <div id="modal-cuenta" class="modal-cuenta" hidden>
 
@@ -122,8 +109,7 @@
             Un espacio pensado exclusivamente para vos.
         </p>
 
-        
-<!-- PESTAÑAS DE MI CUENTA -->
+         
 
 <div class="cuenta-pestanas">
 
@@ -140,10 +126,7 @@
         Crear cuenta
     </button>
 
-</div> 
-
-
-<!-- FORMULARIO DE INICIO DE SESIÓN -->
+</div>  
 
 <form id="formulario-login" class="formulario-cuenta">
 
@@ -177,8 +160,7 @@
     Ingresar a mi cuenta
 </button> 
 </form> 
- 
-<!-- FORMULARIO DE REGISTRO -->
+  
 
 <form id="formulario-registro" class="formulario-cuenta" hidden>
 
@@ -213,13 +195,10 @@
         Crear cuenta
     </button> 
 
-</form>
-
-<!-- MENSAJES DE MI CUENTA -->
+</form> 
 
 <p id="mensaje-cuenta" class="mensaje-cuenta" role="status" aria-live="polite"></p>
-
-<!-- ESPACIO PERSONAL DEL USUARIO -->
+ 
 
 <div id="panel-usuario" class="panel-usuario" hidden>
 
@@ -349,7 +328,6 @@
     </div>
 </article>
 
-<!-- IMAGEN 7 -->
 <article class="foto-card">
     <img
         src="assets/img/limpieza-profunda.jpg"
@@ -362,7 +340,6 @@
     </div>
 </article>
 
-<!-- IMAGEN 8 -->
 <article class="foto-card">
     <img
         src="assets/img/estetica.jpg"
@@ -552,18 +529,20 @@
             ></textarea>
         </div>
 
-        <button type="submit" class="boton">
-            Solicitar turno
-        </button>
-        
-        <button type="reset" class="boton-limpiar">
-        Limpiar formulario
+<div class="botones-formulario">
+    <button type="submit" class="boton">
+        Solicitar turno
     </button>
 
-    </form>
-</section>
- <!-- SUSCRIPCIÓN A NOVEDADES -->
+    <button type="reset" class="boton-limpiar">
+        Limpiar formulario
+    </button>
+</div>
 
+</form>
+ 
+</section>
+ 
 <section id="suscripcion" class="newsletter">
 
     <p class="newsletter-etiqueta">THE MAISON CLUB</p>
@@ -606,8 +585,7 @@
             Quiero suscribirme
         </button>
 
-    </form>
-    <!-- MENSAJE DE ESTADO DE LA SUSCRIPCIÓN -->
+    </form>   
 
 <p
     id="mensaje-newsletter"
@@ -623,18 +601,16 @@
 
 </section>
 
-    </main> 
+        </main>
+
     <footer class="footer">
         <p>MAISON NAILS</p>
         <p>La belleza está en los detalles.</p>
         <p>&copy; 2026 Maison Nails. Todos los derechos reservados.</p>
-    </footer> 
+    </footer>
 
-    <!-- Biblioteca de Supabase -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-<!-- Mi JavaScript -->
-<script src="./script.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./script.js"></script>
 
 </body>
-</html>
+</html> 
